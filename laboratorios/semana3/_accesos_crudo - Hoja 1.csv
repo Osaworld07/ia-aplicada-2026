@@ -1,0 +1,42 @@
+,,,,,,,,,
+,id,nombre,correo,telefono,fecha_acceso,hora_entrada,area,empresa,motivo
+,1,Laura Méndez Ruiz,laura.mendez@correo.com,5512345678,2026-08-03,8:15,Obra norte,Constructora Alfa,Supervisión
+,2,Carlos Ibáñez,CARLOS.IBANEZ@CORREO.COM,55 9876 5432,03/08/2026,8:20,obra norte,Constructora Alfa,supervision
+,3,Ana Torres,ana.torres@correo.com,,2026-08-03,9:05,Oficina central,Diseño Beta,Entrega de planos
+,4,Laura Méndez Ruiz,laura.mendez@correo.com,5512345678,2026-08-03,8:15,Obra norte,Constructora Alfa,Supervisión
+,5,Pedro Salgado,pedro.salgado@correo,5511122233,2026-08-04,23:40,Sala de servidores,Soporte TI Gamma,Mantenimiento
+,6,Mariana Cruz,mariana.cruz@correo.com,5544455566,2026-08-04,10:00,Oficina central,,Entrevista
+,7,Jorge Luna,jorge.luna@correo.com,5577788899,2026-13-04,11:30,Obra sur,Constructora Alfa,Supervisión
+,8,ana torres,ana.torres@correo.com,5566677788,2026-08-05,9:10,Oficina central,Diseño Beta,Entrega de planos
+,9,Roberto Peña,roberto.pena@correo.com,5599900011,2026-08-05,2:15,Sala de servidores,Soporte TI Gamma,Mantenimiento
+,10,Sofía Herrera,sofia.herrera@correo.com,5522233344,2026-08-05,14:00,Obra norte,Constructora Alfa,Visita cliente
+,11,Mateo Salazar,mateo.salazar11@correo.com,4492187301,03/08/2026,7:18,Obra norte,Constructora Alfa,Supervisión
+,12,Valeria Montes,valeria.montes12@correo.com,4493819042,04/08/2026,8:42,Oficina central,Diseño Beta,Entrega de planos
+,13,Diego Navarro,diego.navarro13@correo,4495621873,05/08/2026,9:07,Sala de servidores,Soporte TI Gamma,Mantenimiento
+,14,Camila Ríos,camila.rios14@correo.com,4497143268,06/08/2026,10:35,Obra sur,Constructora Alfa,Entrevista
+,15,Bruno Castañeda,BRUNO.CASTANEDA15@correo.com,4498274519,07/08/2026,11:56,Oficina central,Diseño Beta,Visita cliente
+,16,Renata Solís,renata.solis16@correo.com,4499037764,08/08/2026,12:24,sala de servidores,Soporte TI Gamma,Supervisión
+,17,Emiliano Vargas,emiliano.vargas17@correo.com,4492156384,10/08/2026,13:48,Obra norte,Constructora Alfa,Entrega de planos
+,18,Sofía Beltrán,sofia.beltran18@correo.com,4493267415,11-08-2026,14:19,Oficina central,Diseño Beta,Mantenimiento
+,19,Gael Mendoza,gael.mendoza19@correo.com,4494385296,12/08/2026,15:52,Obra Norte,Constructora Alfa,Entrevista
+,20,Daniela Paredes,daniela.paredes20@correo.com,4495478132,13/08/2026,16:06,Obra sur,Constructora Alfa,Visita cliente
+,21,Nicolás Fuentes,nicolas.fuentes21@correo.com,4496512047,14/08/2026,17:37,Oficina central,Diseño Beta,Supervisión
+,22,Mariana Cabrera,mariana.cabrera22@correo.com,4497623158,17/08/2026,18:15,Sala de servidores,,Entrega de planos
+,23,Leonardo Zamora,leonardo.zamora23@correo.com,4498734269,18/08/2026,19:43,Obra sur,Constructora Alfa,Mantenimiento
+,24,Fernanda Cortés,fernanda.cortes24@correo.com,4499845370,19/08/2026,20:21,Oficina central,Diseño Beta,Entrevista
+,25,Mateo Salazar,mateo.salazar11@correo.com,4492187301,03/08/2026,7:18,Obra norte,Constructora Alfa,Supervisión
+,26,Ximena Duarte,ximena.duarte26@correo.com,4492167592,21/08/2026,22:38,Obra norte,Constructora Alfa,Supervisión
+,27,Sebastián Lara,sebastian.lara27@correo.com,4493278603,24/08/2026,23:12,Obra sur,Diseño Beta,Entrega de planos
+,28,Natalia Robles,natalia.robles28@correo.com,4494389714,25/08/2026,5:26,Sala de servidores,Soporte TI Gamma,Mantenimiento
+,29,Rodrigo Esquivel,rodrigo.esquivel29@correo.com,4495490825,26/08/2026,8:47,Obra norte,Constructora Alfa,Entrevista
+,30,Abril Carrillo,abril.carrillo30@correo.com,4496501936,27/08/2026,10:58,Oficina central,Diseño Beta,Visita cliente
+,31,Iván Miranda,ivan.miranda31@correo.com,4497612047,28/08/2026,12:35,Sala de servidores,Soporte TI Gamma,Supervisión
+,32,Regina Méndez,regina.mendez32@correo.com,4498723158,31/08/2026,14:49,Obra sur,Constructora Alfa,Entrega de planos
+,33,Alejandro Rosales,alejandro.rosales33@correo.com,4499834269,01/09/2026,16:17,Oficina central,Diseño Beta,Mantenimiento
+,34,Lucía Valdés,lucia.valdes34@correo.com,4491945370,02/09/2026,17:53,Sala de servidores,Soporte TI Gamma,Entrevista
+,35,Maximiliano Ortega,max.ortega35@correo.com,4493056481,03/09/2026,19:41,Obra norte,Constructora Alfa,Visita cliente
+,36,Jimena Treviño,jimena.trevino36@correo.com,4494167592,04/09/2026,20:26,oficina central,Diseño Beta,Supervisión
+,37,Santiago Nájera,santiago.najera37@correo.com,4495278603,07/09/2026,21:58,Sala de servidores,Soporte TI Gamma,Entrega de planos
+,38,Paula Escobar,paula.escobar38@correo.com,4496389714,08/09/2026,22:44,Obra sur,Constructora Alfa,Mantenimiento
+,39,Andrés Villanueva,ANDRES.VILLANUEVA39@correo.com,4497490825,09/09/2026,9:08,Oficina central,Diseño Beta,Entrevista
+,40,Daniela Paredes,daniela.paredes20@correo.com,4495478132,13/08/2026,16:06,Obra sur,Constructora Alfa,Visita cliente

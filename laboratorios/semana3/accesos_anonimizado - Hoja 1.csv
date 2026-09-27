@@ -1,0 +1,165 @@
+,,,,,,,,,,,,,,,,,,,,
+,,,,id,fecha_acceso,hora_entrada,area,empresa,motivo,,,,,,id,franja,semana,tipo_empresa,id_persona,correo_enmascarado
+,,,,1,2026-08-03,8:15,Obra Norte,Constructora Alfa,Supervisión,,,,,,1,Mañana,32,Constructora,P001,l***@correo.com
+,,,,2,03/08/2026,8:20,Obra Norte,Constructora Alfa,Supervision,,,,,,2,Mañana,32,Constructora,P002,C***@CORREO.COM
+,,,,3,2026-08-03,9:05,Oficina Central,Diseño Beta,Entrega De Planos,,,,,,3,Mañana,32,Diseño,P003,a***@correo.com
+,,,,4,2026-08-04,23:40,Sala De Servidores,Soporte Ti Gamma,Mantenimiento,,,,,,4,Noche,32,Soporte TI,P004,p***@correo
+,,,,5,2026-08-04,10:00,Oficina Central,,Entrevista,,,,,,5,Mañana,32,—,P005,m***@correo.com
+,,,,6,2026-13-04,11:30,Obra Sur,Constructora Alfa,Supervisión,,,,,,6,Mañana,Inválida,Constructora,P006,j***@correo.com
+,,,,7,2026-08-05,9:10,Oficina Central,Diseño Beta,Entrega De Planos,,,,,,7,Mañana,32,Diseño,P003,a***@correo.com
+,,,,8,2026-08-05,2:15,Sala De Servidores,Soporte Ti Gamma,Mantenimiento,,,,,,8,Madrugada,32,Soporte TI,P008,r***@correo.com
+,,,,9,2026-08-05,14:00,Obra Norte,Constructora Alfa,Visita Cliente,,,,,,9,Tarde,32,Constructora,P009,s***@correo.com
+,,,,10,03/08/2026,7:18,Obra Norte,Constructora Alfa,Supervisión,,,,,,10,Mañana,32,Constructora,P010,m***@correo.com
+,,,,11,04/08/2026,8:42,Oficina Central,Diseño Beta,Entrega De Planos,,,,,,11,Mañana,32,Diseño,P011,v***@correo.com
+,,,,12,05/08/2026,9:07,Sala De Servidores,Soporte Ti Gamma,Mantenimiento,,,,,,12,Mañana,32,Soporte TI,P012,d***@correo
+,,,,13,06/08/2026,10:35,Obra Sur,Constructora Alfa,Entrevista,,,,,,13,Mañana,32,Constructora,P013,c***@correo.com
+,,,,14,07/08/2026,11:56,Oficina Central,Diseño Beta,Visita Cliente,,,,,,14,Mañana,32,Diseño,P014,B***@correo.com
+,,,,15,08/08/2026,12:24,Sala De Servidores,Soporte Ti Gamma,Supervisión,,,,,,15,Tarde,32,Soporte TI,P015,r***@correo.com
+,,,,16,10/08/2026,13:48,Obra Norte,Constructora Alfa,Entrega De Planos,,,,,,16,Tarde,33,Constructora,P016,e***@correo.com
+,,,,17,11-08-2026,14:19,Oficina Central,Diseño Beta,Mantenimiento,,,,,,17,Tarde,33,Diseño,P017,s***@correo.com
+,,,,18,12/08/2026,15:52,Obra Norte,Constructora Alfa,Entrevista,,,,,,18,Tarde,33,Constructora,P018,g***@correo.com
+,,,,19,13/08/2026,16:06,Obra Sur,Constructora Alfa,Visita Cliente,,,,,,19,Tarde,33,Constructora,P019,d***@correo.com
+,,,,20,14/08/2026,17:37,Oficina Central,Diseño Beta,Supervisión,,,,,,20,Tarde,33,Diseño,P020,n***@correo.com
+,,,,21,17/08/2026,18:15,Sala De Servidores,,Entrega De Planos,,,,,,21,Noche,34,—,P021,m***@correo.com
+,,,,22,18/08/2026,19:43,Obra Sur,Constructora Alfa,Mantenimiento,,,,,,22,Noche,34,Constructora,P022,l***@correo.com
+,,,,23,19/08/2026,20:21,Oficina Central,Diseño Beta,Entrevista,,,,,,23,Noche,34,Diseño,P023,f***@correo.com
+,,,,24,21/08/2026,22:38,Obra Norte,Constructora Alfa,Supervisión,,,,,,24,Noche,34,Constructora,P024,x***@correo.com
+,,,,25,24/08/2026,23:12,Obra Sur,Diseño Beta,Entrega De Planos,,,,,,25,Noche,35,Diseño,P025,s***@correo.com
+,,,,26,25/08/2026,5:26,Sala De Servidores,Soporte Ti Gamma,Mantenimiento,,,,,,26,Madrugada,35,Soporte TI,P026,n***@correo.com
+,,,,27,26/08/2026,8:47,Obra Norte,Constructora Alfa,Entrevista,,,,,,27,Mañana,35,Constructora,P027,r***@correo.com
+,,,,28,27/08/2026,10:58,Oficina Central,Diseño Beta,Visita Cliente,,,,,,28,Mañana,35,Diseño,P028,a***@correo.com
+,,,,29,28/08/2026,12:35,Sala De Servidores,Soporte Ti Gamma,Supervisión,,,,,,29,Tarde,35,Soporte TI,P029,i***@correo.com
+,,,,30,31/08/2026,14:49,Obra Sur,Constructora Alfa,Entrega De Planos,,,,,,30,Tarde,36,Constructora,P030,r***@correo.com
+,,,,31,01/09/2026,16:17,Oficina Central,Diseño Beta,Mantenimiento,,,,,,31,Tarde,36,Diseño,P031,a***@correo.com
+,,,,32,02/09/2026,17:53,Sala De Servidores,Soporte Ti Gamma,Entrevista,,,,,,32,Tarde,36,Soporte TI,P032,l***@correo.com
+,,,,33,03/09/2026,19:41,Obra Norte,Constructora Alfa,Visita Cliente,,,,,,33,Noche,36,Constructora,P033,m***@correo.com
+,,,,34,04/09/2026,20:26,Oficina Central,Diseño Beta,Supervisión,,,,,,34,Noche,36,Diseño,P034,j***@correo.com
+,,,,35,07/09/2026,21:58,Sala De Servidores,Soporte Ti Gamma,Entrega De Planos,,,,,,35,Noche,37,Soporte TI,P035,s***@correo.com
+,,,,36,08/09/2026,22:44,Obra Sur,Constructora Alfa,Mantenimiento,,,,,,36,Noche,37,Constructora,P036,p***@correo.com
+,,,,37,09/09/2026,9:08,Oficina Central,Diseño Beta,Entrevista,,,,,,37,Mañana,37,Diseño,P037,A***@correo.com
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,4,Soporte TI,Sala De Servidores,Noche,No directamente,,,,,,,,,,,,,,
+,,17,Diseño,Oficina Central,Tarde,No directamente,,,,,,,,,,,,,,
+,,31,Diseño,Oficina Central,Tarde,No directamente,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,"Al revisar las 37 filas, encontré estas combinaciones:",,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,tipo_empresa,area,franja,Cantidad,,,,,,,,,,,,,,,
+,,Constructora,Obra Norte,Mañana,4,,,,,,,,,,,,,,,
+,,Diseño,Oficina Central,Mañana,6,,,,,,,,,,,,,,,
+,,Soporte TI,Sala De Servidores,Noche,2,,,,,,,,,,,,,,,
+,,Constructora,Obra Sur,Mañana,2,,,,,,,,,,,,,,,
+,,Soporte TI,Sala De Servidores,Madrugada,2,,,,,,,,,,,,,,,
+,,Constructora,Obra Norte,Tarde,3,,,,,,,,,,,,,,,
+,,Soporte TI,Sala De Servidores,Mañana,1,,,,,,,,,,,,,,,
+,,Soporte TI,Sala De Servidores,Tarde,3,,,,,,,,,,,,,,,
+,,Diseño,Oficina Central,Tarde,3,,,,,,,,,,,,,,,
+,,Constructora,Obra Sur,Tarde,2,,,,,,,,,,,,,,,
+,,Constructora,Obra Sur,Noche,2,,,,,,,,,,,,,,,
+,,Diseño,Oficina Central,Noche,2,,,,,,,,,,,,,,,
+,,Constructora,Obra Norte,Noche,2,,,,,,,,,,,,,,,
+,,Diseño,Obra Sur,Noche,1,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,"Además, las dos filas donde empresa está vacía también generan combinaciones únicas.",,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,3. Riesgo residual,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,Hay combinaciones que aparecen una sola vez. Por ejemplo:,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,Soporte TI + Sala De Servidores + Mañana,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,y,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,Diseño + Obra Sur + Noche,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,laura.mendez@correo.com,Obra norte,Constructora Alfa,Supervisión,,,,,,,,,,,,,,,,
+,CARLOS.IBANEZ@CORREO.COM,obra norte,Constructora Alfa,supervision,,,,,,,,,,,,,,,,
+,ana.torres@correo.com,Oficina central,Diseño Beta,Entrega de planos,,,,,,,,,,,,,,,,
+,pedro.salgado@correo,Sala de servidores,Soporte TI Gamma,Mantenimiento,,,,,,,,,,,,,,,,
+,mariana.cruz@correo.com,Oficina central,,Entrevista,,,,,,,,,,,,,,,,
+,jorge.luna@correo.com,Obra sur,Constructora Alfa,Supervisión,,,,,,,,,,,,,,,,
+,ana.torres@correo.com,Oficina central,Diseño Beta,Entrega de planos,,,,,,,,,,,,,,,,
+,roberto.pena@correo.com,Sala de servidores,Soporte TI Gamma,Mantenimiento,,,,,,,,,,,,,,,,
+,sofia.herrera@correo.com,Obra norte,Constructora Alfa,Visita cliente,,,,,,,,,,,,,,,,
+,mateo.salazar11@correo.com,Obra norte,Constructora Alfa,Supervisión,,,,,,,,,,,,,,,,
+,valeria.montes12@correo.com,Oficina central,Diseño Beta,Entrega de planos,,,,,,,,,,,,,,,,
+,diego.navarro13@correo,Sala de servidores,Soporte TI Gamma,Mantenimiento,,,,,,,,,,,,,,,,
+,camila.rios14@correo.com,Obra sur,Constructora Alfa,Entrevista,,,,,,,,,,,,,,,,
+,BRUNO.CASTANEDA15@correo.com,Oficina central,Diseño Beta,Visita cliente,,,,,,,,,,,,,,,,
+,renata.solis16@correo.com,sala de servidores,Soporte TI Gamma,Supervisión,,,,,,,,,,,,,,,,
+,emiliano.vargas17@correo.com,Obra norte,Constructora Alfa,Entrega de planos,,,,,,,,,,,,,,,,
+,sofia.beltran18@correo.com,Oficina central,Diseño Beta,Mantenimiento,,,,,,,,,,,,,,,,
+,gael.mendoza19@correo.com,Obra Norte,Constructora Alfa,Entrevista,,,,,,,,,,,,,,,,
+,daniela.paredes20@correo.com,Obra sur,Constructora Alfa,Visita cliente,,,,,,,,,,,,,,,,
+,nicolas.fuentes21@correo.com,Oficina central,Diseño Beta,Supervisión,,,,,,,,,,,,,,,,
+,mariana.cabrera22@correo.com,Sala de servidores,,Entrega de planos,,,,,,,,,,,,,,,,
+,leonardo.zamora23@correo.com,Obra sur,Constructora Alfa,Mantenimiento,,,,,,,,,,,,,,,,
+,fernanda.cortes24@correo.com,Oficina central,Diseño Beta,Entrevista,,,,,,,,,,,,,,,,
+,ximena.duarte26@correo.com,Obra norte,Constructora Alfa,Supervisión,,,,,,,,,,,,,,,,
+,sebastian.lara27@correo.com,Obra sur,Diseño Beta,Entrega de planos,,,,,,,,,,,,,,,,
+,natalia.robles28@correo.com,Sala de servidores,Soporte TI Gamma,Mantenimiento,,,,,,,,,,,,,,,,
+,rodrigo.esquivel29@correo.com,Obra norte,Constructora Alfa,Entrevista,,,,,,,,,,,,,,,,
+,abril.carrillo30@correo.com,Oficina central,Diseño Beta,Visita cliente,,,,,,,,,,,,,,,,
+,ivan.miranda31@correo.com,Sala de servidores,Soporte TI Gamma,Supervisión,,,,,,,,,,,,,,,,
+,regina.mendez32@correo.com,Obra sur,Constructora Alfa,Entrega de planos,,,,,,,,,,,,,,,,
+,alejandro.rosales33@correo.com,Oficina central,Diseño Beta,Mantenimiento,,,,,,,,,,,,,,,,
+,lucia.valdes34@correo.com,Sala de servidores,Soporte TI Gamma,Entrevista,,,,,,,,,,,,,,,,
+,max.ortega35@correo.com,Obra norte,Constructora Alfa,Visita cliente,,,,,,,,,,,,,,,,
+,jimena.trevino36@correo.com,oficina central,Diseño Beta,Supervisión,,,,,,,,,,,,,,,,
+,santiago.najera37@correo.com,Sala de servidores,Soporte TI Gamma,Entrega de planos,,,,,,,,,,,,,,,,
+,paula.escobar38@correo.com,Obra sur,Constructora Alfa,Mantenimiento,,,,,,,,,,,,,,,,
+,ANDRES.VILLANUEVA39@correo.com,Oficina central,Diseño Beta,Entrevista,,,,,,,,,,,,,,,,
