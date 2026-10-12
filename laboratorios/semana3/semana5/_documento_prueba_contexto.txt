@@ -1,0 +1,502 @@
+﻿Laboratorio — Tokens, temperatura y ventana de contexto
+Materia: Inteligencia Artificial Aplicada | Carrera: Arquitectura e Ingeniería en Ciberseguridad Semana: 5 | Tema: Modelos fundacionales y funcionamiento de modelos como ChatGPT
+
+
+________________
+
+
+Propósito
+Al terminar este laboratorio serás capaz de:
+
+
+* Medir cuántos tokens ocupa un texto y explicar por qué el mismo contenido cuesta distinto en español y en inglés
+* Demostrar con datos propios el efecto de la temperatura sobre la variabilidad de las respuestas de un modelo
+* Provocar y documentar la pérdida de información cuando un texto excede o satura la ventana de contexto
+* Justificar la elección de un modelo para tu proyecto con base en mediciones y no en opiniones
+
+
+Caso guía: Tu equipo de proyecto debe elegir qué modelo generativo usará y cómo lo configurará. El líder del proyecto te pregunta tres cosas que nadie sabe responder con certeza: cuánto texto puede recibir el modelo antes de "olvidar" cosas, por qué a veces responde diferente a la misma pregunta y por qué los documentos en español parecen agotar el límite más rápido que los documentos en inglés. Tu tarea es responder las tres preguntas con experimentos, no con suposiciones.
+
+
+Criterio de éxito: Tienes tres tablas llenas con datos que tú mismo generaste: una de conteo de tokens, una de variabilidad por temperatura con nueve respuestas y una de pérdida de información por saturación de contexto. Con esas tablas justificas por escrito qué modelo y qué configuración usará tu proyecto.
+
+
+________________
+
+
+Requisitos
+* Cuenta de Google para acceder a Google AI Studio: https://aistudio.google.com (plan gratuito)
+* Alternativa si no puedes usar AI Studio: ChatGPT o Gemini en su versión gratuita (perderás el control directo de temperatura; el laboratorio indica cómo adaptarte)
+* Tokenizador web de OpenAI: https://platform.openai.com/tokenizer (no requiere cuenta). Alternativa: Tiktokenizer en https://tiktokenizer.vercel.app
+* Hoja de cálculo (Google Sheets o Excel)
+* Un documento de texto de al menos cuatro páginas relacionado con tu proyecto o tu carrera (un reglamento de construcción, una norma de seguridad, un artículo). Debe ser público o ficticio; no uses datos personales, según la política de datos de la semana 4
+* Repositorio personal del curso en GitHub
+
+
+________________
+
+
+Parte 1 — Tokens: la unidad con la que el modelo lee
+Un modelo de lenguaje no lee letras ni palabras: lee tokens, fragmentos de texto que el modelo aprendió a reconocer durante su entrenamiento. Todo límite de un modelo (cuánto puede leer, cuánto cuesta, cuánto puede responder) se mide en tokens.
+
+
+Paso 1.1 — Tokeniza una frase sencilla
+
+
+Abre el tokenizador web. Escribe esta frase exactamente:
+
+
+La inteligencia artificial aplicada resuelve problemas reales.
+
+
+Observa dos números: la cantidad de caracteres y la cantidad de tokens. Observa también cómo el tokenizador colorea cada fragmento: verás que algunas palabras son un solo token y otras se parten en dos o tres.
+
+
+Anota en tu reporte: número de caracteres, número de tokens y qué palabras se partieron.
+
+
+Si falla: si el tokenizador muestra un selector de modelo, elige el más reciente disponible. Si la página no carga, usa la alternativa indicada en Requisitos; los números variarán un poco entre tokenizadores, y eso también es una observación válida.
+
+
+Captura obligatoria: tokenizador mostrando la frase coloreada por tokens con el conteo visible.
+
+
+Paso 1.2 — Compara español contra inglés
+
+
+Traduce la misma frase al inglés (puedes usar un modelo generativo para traducirla) y tokenízala:
+
+
+Applied artificial intelligence solves real problems.
+
+
+Ahora repite el ejercicio con un párrafo de unas 100 palabras tomado de tu documento de cuatro páginas, primero en español y después traducido al inglés. Llena esta tabla:
+
+
+Texto
+	Idioma
+	Caracteres
+	Tokens
+	Caracteres por token
+	Frase corta
+	Español
+	
+
+	
+
+	
+
+	Frase corta
+	Inglés
+	
+
+	
+
+	
+
+	Párrafo de 100 palabras
+	Español
+	
+
+	
+
+	
+
+	Párrafo de 100 palabras
+	Inglés
+	
+
+	
+
+	
+
+	
+
+Calcula la última columna dividiendo caracteres entre tokens. Un valor menor significa que el idioma es "más caro" en tokens.
+
+
+Explica con tus palabras: ¿por qué el español necesita más tokens que el inglés para decir lo mismo? Piensa en cómo se entrenó el modelo y en qué idioma predominaba el texto de entrenamiento.
+
+
+Paso 1.3 — Estima el tamaño de tu documento
+
+
+Pega el documento completo de cuatro páginas en el tokenizador (si es muy largo, pega la mitad y multiplica por dos). Anota el total de tokens. Ese número lo usarás en la Parte 3.
+
+
+Si falla: si el tokenizador se vuelve lento o no acepta el texto completo, tokeniza una página, anota su valor y multiplícalo por el número de páginas. Indica en el reporte que fue una estimación.
+
+
+Captura obligatoria: tokenizador con el conteo del documento o de la página usada para estimar.
+
+
+________________
+
+
+Parte 2 — Temperatura: por qué el modelo no siempre responde igual
+Al generar cada token, el modelo calcula una probabilidad para cada token posible y elige uno. La temperatura controla cuánto se permite elegir tokens poco probables. Con temperatura 0 tiende a elegir siempre el más probable; con temperatura alta explora opciones menos probables y las respuestas varían más.
+
+
+Paso 2.1 — Abre Google AI Studio y localiza el control de temperatura
+
+
+Entra a https://aistudio.google.com con tu cuenta de Google. Crea un nuevo prompt de tipo chat. En el panel lateral de configuración del modelo busca el control llamado "Temperature" o "Temperatura". Verás un deslizador o un campo numérico. Anota el rango que permite (normalmente de 0 a 2) y el valor por defecto.
+
+
+Si falla: si no ves el panel de configuración, busca un ícono de ajustes o de deslizadores en la parte superior derecha. Si tu cuenta no tiene acceso a AI Studio en tu región, usa la alternativa del Paso 2.4.
+
+
+Captura obligatoria: AI Studio con el panel de configuración abierto y el control de temperatura visible.
+
+
+Paso 2.2 — Ejecuta el mismo prompt tres veces a tres temperaturas
+
+
+Usa este prompt sin modificarlo. Es corto a propósito para que las diferencias sean fáciles de comparar:
+
+
+Escribe una sola frase, de máximo 20 palabras, que describa qué es un edificio inteligente.
+
+
+Si tu carrera es Ciberseguridad puedes sustituir "un edificio inteligente" por "un firewall". Usa la misma versión en las nueve ejecuciones.
+
+
+Procedimiento:
+
+
+1. Fija la temperatura en 0. Envía el prompt. Copia la respuesta en la tabla. Borra el historial del chat (o crea un chat nuevo) y repite dos veces más. Es importante borrar el historial: si no lo haces, el modelo verá sus respuestas anteriores y eso contaminará el experimento.
+2. Fija la temperatura en 0.7 y repite el proceso tres veces.
+3. Fija la temperatura en 1.5 (o el máximo permitido si es menor) y repite tres veces.
+4. El código de verificación interno de este documento es AZUL-7342.
+
+
+
+
+Temperatura
+	Ejecución
+	Respuesta
+	¿Idéntica a la anterior?
+	0
+	1
+	
+
+	No aplica
+	0
+	2
+	
+
+	
+
+	0
+	3
+	
+
+	
+
+	0.7
+	1
+	
+
+	No aplica
+	0.7
+	2
+	
+
+	
+
+	0.7
+	3
+	
+
+	
+
+	1.5
+	1
+	
+
+	No aplica
+	1.5
+	2
+	
+
+	
+
+	1.5
+	3
+	
+
+	
+
+	
+
+Observa: a temperatura 0 las tres respuestas deberían ser iguales o casi iguales; a 1.5 deberían diferir en vocabulario y quizá en sentido. Si a 1.5 aparecen frases extrañas o palabras fuera de lugar, anótalo: es el comportamiento esperado cuando el modelo elige tokens poco probables.
+
+
+Si falla: si a temperatura 0 obtienes respuestas distintas, verifica que borraste el historial entre ejecuciones y que no cambiaste ningún otro parámetro. Pequeñas variaciones pueden ocurrir aun a temperatura 0; anótalo como observación.
+
+
+Captura obligatoria: una de las ejecuciones a temperatura 1.5 mostrando el valor del control y la respuesta.
+
+
+Paso 2.3 — Mide la variabilidad
+
+
+Para cada temperatura cuenta cuántas palabras distintas aparecen en total entre las tres respuestas (une las tres frases, elimina repetidas y cuenta). Llena:
+
+
+Temperatura
+	Palabras distintas en total
+	Respuestas idénticas entre sí
+	0
+	
+
+	
+
+	0.7
+	
+
+	
+
+	1.5
+	
+
+	
+
+	
+
+Explica con tus palabras: si tuvieras que usar el modelo para redactar el aviso de privacidad de tu proyecto, ¿qué temperatura elegirías y por qué? ¿Y si lo usaras para proponer diez nombres creativos para el proyecto?
+
+
+Paso 2.4 — Alternativa sin control directo de temperatura
+
+
+Si no pudiste usar AI Studio, en ChatGPT o Gemini repite el prompt del Paso 2.2 nueve veces en chats nuevos, sin poder fijar la temperatura. Registra las nueve respuestas en la tabla con la temperatura marcada como "por defecto (desconocida)". Luego intenta influir en la variabilidad con instrucciones de texto y registra tres ejecuciones más de cada una:
+
+
+Responde de la forma más predecible y literal posible, sin creatividad. Escribe una sola frase, de máximo 20 palabras, que describa qué es un edificio inteligente.
+
+
+Responde de la forma más creativa e inesperada posible. Escribe una sola frase, de máximo 20 palabras, que describa qué es un edificio inteligente.
+
+
+Anota en el reporte que usaste la alternativa y qué diferencia observaste entre controlar la temperatura por parámetro y pedirla por instrucción.
+
+
+________________
+
+
+Parte 3 — Ventana de contexto: cuánto puede recordar el modelo
+La ventana de contexto es la cantidad máxima de tokens que el modelo puede recibir y producir en una sola interacción. Todo lo que quede fuera de esa ventana no existe para el modelo. Y aun dentro de ella, la información situada en medio de un texto largo suele recuperarse peor que la del inicio o el final.
+
+
+Paso 3.1 — Prepara la aguja y el pajar
+
+
+Vas a esconder un dato ficticio en tu documento largo y comprobar si el modelo lo encuentra. Abre el documento de cuatro páginas en un editor de texto. Inserta esta frase exactamente a la mitad del documento, en medio de un párrafo, sin resaltarla:
+
+
+El código de verificación interno de este documento es AZUL-7342.
+
+
+Guarda el documento como documento_prueba_contexto.txt. Anota en qué página y párrafo quedó la frase.
+
+
+Paso 3.2 — Pregunta por la aguja con el documento completo
+
+
+En AI Studio (o en ChatGPT/Gemini) abre un chat nuevo. Pega el documento completo seguido de esta pregunta:
+
+
+Con base únicamente en el texto anterior, ¿cuál es el código de verificación interno del documento? Si no aparece, responde "No aparece".
+
+
+Anota si el modelo respondió AZUL-7342, si respondió "No aparece" o si inventó otro código. Registra también cuántos tokens mostró la interfaz para el chat, si el dato es visible (AI Studio muestra el conteo de tokens del contexto).
+
+
+Si falla: si la interfaz rechaza el texto por ser demasiado largo, ese rechazo es un resultado: anótalo con el número de tokens estimado en el Paso 1.3 y reduce el documento a la mitad para continuar.
+
+
+Captura obligatoria: respuesta del modelo a la pregunta del código con el conteo de tokens visible si la interfaz lo muestra.
+
+
+Paso 3.3 — Satura el contexto
+
+
+Ahora duplica el documento: pega el texto completo dos veces seguidas (sin la aguja en la segunda copia) y al final pega dos veces más si la interfaz lo permite. El objetivo es acercarte al límite de la ventana de contexto del modelo. Después haz la misma pregunta del Paso 3.2.
+
+
+Repite agregando copias hasta que ocurra una de estas tres cosas: el modelo deja de encontrar el código, el modelo inventa un código distinto o la interfaz rechaza el texto. Registra cada intento:
+
+
+Intento
+	Copias del documento
+	Tokens aproximados
+	Respuesta del modelo
+	¿Correcta?
+	1
+	1
+	
+
+	
+
+	
+
+	2
+	2
+	
+
+	
+
+	
+
+	3
+	4
+	
+
+	
+
+	
+
+	4
+	
+
+	
+
+	
+
+	
+
+	
+
+Observa en qué punto se degrada la respuesta. Si el modelo siguió encontrando el código hasta que la interfaz rechazó el texto, anótalo: significa que ese modelo maneja bien contextos largos y el límite duro es la interfaz.
+
+
+Explica con tus palabras: ¿por qué tu validación demuestra que existe una ventana de contexto? ¿Qué diferencia hay entre que el modelo "no encuentre" el código y que "invente" uno, y cuál de los dos comportamientos es más peligroso para tu proyecto?
+
+
+Paso 3.4 — Prueba la posición de la aguja
+
+
+Con una sola copia del documento, mueve la frase del código al primer párrafo, pregunta, y anota el resultado. Luego muévela al último párrafo y repite. Compara con el resultado del Paso 3.2, donde estaba a la mitad.
+
+
+Posición de la aguja
+	Respuesta
+	¿Correcta?
+	Inicio
+	
+
+	
+
+	Mitad
+	
+
+	
+
+	Final
+	
+
+	
+
+	
+
+________________
+
+
+Parte 4 — Selección del modelo para el proyecto
+Con tus tres experimentos tienes evidencia para decidir. Esta parte alimenta tu avance de proyecto.
+
+
+Paso 4.1 — Completa la ficha de selección
+
+
+Crea un archivo seleccion_modelo_proyecto.md con esta estructura y llénala con tus datos:
+
+
+# Selección de modelo generativo para el proyecto [nombre]
+
+
+## Modelos evaluados
+
+
+Lista los modelos que probaste en este laboratorio y en la semana 1 (ChatGPT, Gemini, Deepseek, el modelo de AI Studio).
+
+
+## Evidencia de tokens
+
+
+Tokens de mi documento de referencia: [valor del Paso 1.3]. Caracteres por token en español: [valor]. Implicación para mi proyecto: [una o dos líneas].
+
+
+## Evidencia de temperatura
+
+
+Temperatura que usaré para tareas de precisión: [valor] porque [dato de la tabla del Paso 2.3].
+
+
+Temperatura que usaré para tareas creativas: [valor] porque [dato].
+
+
+## Evidencia de contexto
+
+
+El modelo empezó a fallar con aproximadamente [tokens] en el intento [n]. Mis documentos del proyecto miden aproximadamente [tokens]. Por lo tanto: [caben completos / debo dividirlos / debo resumirlos].
+
+
+## Decisión
+
+
+Modelo elegido: [nombre]. Configuración: temperatura [valor] para [tarea]. Restricciones de datos según la política de la semana 4: [resumen].
+
+
+Paso 4.2 — Sube la evidencia
+
+
+Sube a laboratorios/semana05/ en tu repositorio: seleccion_modelo_proyecto.md, la hoja de cálculo con las tablas de las Partes 1 a 3 y documento_prueba_contexto.txt. Mensaje de commit: Semana 5: experimentos de tokens, temperatura y contexto.
+
+
+Captura obligatoria: carpeta laboratorios/semana05 en GitHub con los tres archivos.
+
+
+________________
+
+
+Parte 5 — Reflexión final
+Responde en tu reporte con base en lo que observaste, no en definiciones de internet:
+
+
+1. Con tu dato de caracteres por token en español, calcula cuántas páginas de tu documento cabrían en una ventana de 32,000 tokens. ¿Es suficiente para el tipo de documentos que manejará tu proyecto? ¿Qué harías si no lo fuera?
+
+
+2. En el experimento de temperatura, ¿hubo alguna respuesta a 1.5 que fuera claramente incorrecta o sin sentido? Si tu proyecto usara esa temperatura para responder a usuarios reales, ¿qué riesgo de la Unidad I (sesgo, daño, desinformación) se agravaría?
+
+
+3. En el experimento de contexto, el modelo tuvo acceso a todo el texto y aun así falló o inventó en algún punto. ¿Qué te dice esto sobre confiar en un modelo para "leer" un reglamento o una norma completa? ¿Cómo validarías sus respuestas antes de usarlas en el proyecto?
+
+
+________________
+
+
+Checklist de cierre
+Antes de entregar verifica:
+
+
+* Tokenizador con la frase coloreada y conteo visible (captura)
+* Tabla de tokens español contra inglés con caracteres por token calculados
+* Conteo o estimación de tokens del documento de cuatro páginas (captura)
+* Panel de AI Studio con el control de temperatura visible, o nota de uso de la alternativa (captura)
+* Tabla de nueve ejecuciones a tres temperaturas con tus respuestas reales y tabla de variabilidad
+* Tabla de saturación de contexto con al menos tres intentos y tabla de posición de la aguja
+* seleccion_modelo_proyecto.md con los datos de tus tablas, subido al repositorio junto con la hoja de cálculo y el documento de prueba (captura)
+* Tres preguntas de reflexión respondidas con argumentación propia
+
+
+________________
+
+
+
+
+Entregable: Reporte APA 7 con capturas de pantalla de tu equipo en cada sección indicada, enlace a la carpeta laboratorios/semana05/ de tu repositorio con la ficha de selección, la hoja de cálculo de resultados y el documento de prueba, y declaración de uso de IA.
+
+
+Conexión con el proyecto: La ficha seleccion_modelo_proyecto.md es el avance 5 del proyecto: la elección justificada del modelo y su configuración. Los valores de temperatura y el límite de contexto que mediste se aplicarán al diseñar prompts en las semanas 6 y 7 y al configurar el agente en la Unidad III.
